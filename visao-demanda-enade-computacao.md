@@ -12,7 +12,7 @@
 | Tipo | Proposta de novo sistema; relação com soluções institucionais a investigar |
 | Sistema ou produto relacionado | PreparaEdu e Plataforma de Questões e Avaliações da Unifor, mencionados na proposta do tema; relação e eventual integração a confirmar |
 | Área solicitante | Projeto acadêmico da disciplina Requisitos e Modelagem de Sistemas; demandante institucional a definir |
-| Responsável pela elaboração | Grupo do projeto — Arthur Paulo, Guilherme Adlay e José Cleidson |
+| Responsável pela elaboração | Grupo 6 — Arthur Paulo, Guilherme Adley e José Cleidson |
 | Responsável pela validação | Representantes de estudantes, professores e coordenação — nomes e atribuições a definir; avaliação acadêmica pelo professor da disciplina |
 | Situação do documento | Rascunho |
 | Versão e data | 0.1 — 01/11/2026 |
