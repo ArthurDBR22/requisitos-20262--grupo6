@@ -1,0 +1,43 @@
+@startuml implantacao_enade
+skinparam shadowing false
+title Implantação — Plataforma ENADE
+Proposta; ambiente e tecnologias a definir
+node "N01 — Dispositivo do usuário" as N01 <<device>> {
+ node "Navegador" as Browser <<executionEnvironment>> {
+  artifact "A01 — Interface carregada\nRealiza C01" as A01cliente
+ }
+}
+node "N02 — Servidor de aplicação" as N02 {
+ node "Servidor web" as Web <<executionEnvironment>> {
+  artifact "A01 — Arquivos da interface" as A01
+ }
+ node "Runtime da aplicação" as Runtime <<executionEnvironment>> {
+  artifact "A02 — Backend\nC02, C03, C04, C05, C06, C07\nC08 somente se aprovado" as A02
+ }
+ Web -- Runtime : encaminha operações
+}
+node "N03 — Servidor de dados" as N03 {
+ node "SGBD" <<executionEnvironment>> {
+  artifact "A03 — Base da plataforma" as A03
+ }
+}
+node "N04 — Armazenamento de arquivos" as N04 {
+ node "Serviço de arquivos" <<executionEnvironment>> {
+  artifact "A04 — Acervo de arquivos" as A04
+ }
+}
+node "N05 — Repositório de cópias" as N05 #FFF6E3 {
+ artifact "A05 — Cópias de dados e arquivos" as A05
+}
+N01 -- N02 : HTTPS
+N02 -- N03 : conexão de dados protegida
+protocolo a definir
+N02 -- N04 : canal protegido
+protocolo a definir
+N03 -- N05 : cópia / restauração
+N04 -- N05 : cópia / restauração
+note bottom of N05
+Política, frequência, retenção e operação a definir.
+Os caminhos não especificam quem inicia a cópia.
+end note
+@enduml

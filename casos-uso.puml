@@ -1,0 +1,60 @@
+@startuml casos_uso_enade
+left to right direction
+skinparam packageStyle rectangle
+skinparam shadowing false
+skinparam backgroundColor white
+title Casos de Uso — ENADE Engenharia da Computação
+Proposta inicial — validação pendente
+actor "AT-01\nEstudante" as AT01
+actor "AT-02\nProfessor / responsável pedagógico" as AT02
+actor "AT-03\nCoordenador" as AT03
+actor "AT-04\nAdministrador" as AT04
+rectangle "Plataforma ENADE — Engenharia da Computação" {
+  usecase "CDU-01.1\nIniciar ou encerrar sessão" as CDU01_1
+  usecase "CDU-01.2\nGerenciar contas e perfis" as CDU01_2
+  usecase "CDU-02\nConsultar biblioteca" as CDU02
+  usecase "CDU-03\nGerenciar acervo" as CDU03
+  usecase "CDU-04\nGerenciar questões" as CDU04
+  usecase "CDU-05\nAssociar conteúdos ao currículo" as CDU05
+  usecase "CDU-06\nMontar e publicar simulados" as CDU06
+  usecase "CDU-07.1\nPraticar questões" as CDU07_1
+  usecase "CDU-07.2\nRealizar simulado" as CDU07_2
+  usecase "CDU-07.3\nConsultar correção comentada" as CDU07_3
+  usecase "CDU-08.1\nConsultar desempenho individual" as CDU08_1
+  usecase "CDU-08.2\nConsultar resultados consolidados" as CDU08_2
+  usecase "CDU-09.1\nIndicar reforço" as CDU09_1
+  usecase "CDU-09.2\nConsultar indicações de reforço" as CDU09_2
+  usecase "CDU-10\nImportar questões de PDF" as CDU10 <<em avaliação>> #FFF4DB
+  usecase "CDU-11\nConsultar frequência histórica" as CDU11 <<em avaliação>> #FFF4DB
+}
+AT01 -- CDU01_1
+AT01 -- CDU02
+AT01 -- CDU07_1
+AT01 -- CDU07_2
+AT01 -- CDU07_3
+AT01 -- CDU08_1
+AT01 -- CDU09_2
+AT01 -- CDU11
+AT02 -- CDU01_1
+AT02 -- CDU02
+AT02 -- CDU03
+AT02 -- CDU04
+AT02 -- CDU05
+AT02 -- CDU06
+AT02 -- CDU08_1
+AT02 -- CDU08_2
+AT02 -- CDU09_1
+AT02 -- CDU10
+AT02 -- CDU11
+AT03 -- CDU01_1
+AT03 -- CDU05
+AT03 -- CDU08_2
+AT04 -- CDU01_1
+AT04 -- CDU01_2
+note bottom
+Associação indica participação; permissões e condições continuam aplicáveis.
+CDU-10 e CDU-11: funcionalidades em avaliação.
+Autenticação é precondição das operações restritas.
+O encerramento por tempo é comportamento interno de Realizar simulado.
+end note
+@enduml

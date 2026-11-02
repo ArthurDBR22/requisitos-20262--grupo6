@@ -1,0 +1,36 @@
+@startuml componentes_enade
+top to bottom direction
+skinparam componentStyle uml2
+skinparam shadowing false
+title Componentes — Plataforma ENADE
+Arquitetura proposta; validação pendente
+component "C01\nInterface web" as C01
+package "Aplicação no servidor — backend modular proposto" {
+ component "C02\nAplicação / API" as C02
+ component "C03\nIdentidade e acesso" as C03
+ component "C04\nConteúdos e currículo" as C04
+ component "C05\nAvaliações e correção" as C05
+ component "C06\nAnálise e reforço" as C06
+ component "C07\nPersistência" as C07
+ component "C08\nImportação de PDF" as C08 <<em avaliação>> #FFF4DB
+}
+C01 ..> C02 : usa
+C02 ..> C03
+C02 ..> C04
+C02 ..> C05
+C02 ..> C06
+C02 ..> C08
+C03 ..> C07
+C04 ..> C07
+C05 ..> C07
+C06 ..> C07
+note bottom of C02
+Coordena autorização e operações.
+Obtém dados dos módulos e os passa aos demais.
+C08 retorna rascunhos; C04 os mantém para revisão.
+end note
+note bottom of C07
+Acesso a dados estruturados e arquivos.
+Não representa o servidor de banco de dados.
+end note
+@enduml
