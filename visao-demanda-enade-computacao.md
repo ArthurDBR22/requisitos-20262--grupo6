@@ -1,6 +1,6 @@
 # Visão da Demanda (VD) — Plataforma de Gestão do Conhecimento e Aprendizagem ENADE
 
-> **Curso:** Engenharia da Computação · **Identificador:** VD-ENADE-01 · **Template:** LAPIS 2.1
+> **Curso:** Engenharia da Computação
 >
 > **Situação:** rascunho inicial para revisão do grupo e elicitação. O tema, o recorte do curso e a proposta de biblioteca foram definidos pelo integrante solicitante. As necessidades, prioridades e funcionalidades ainda dependem de investigação e validação com as partes interessadas. Não há resultados de entrevistas fornecidos para esta versão.
 
@@ -95,7 +95,6 @@ Escopo inicial proposto, sujeito à priorização e à validação:
 - Previsão dos temas de futuras provas ou garantia de melhoria de nota.
 - Correção automática de questões discursivas e geração automática de conteúdos pedagógicos por IA.
 - Integrações diretas com INEP, PreparaEdu ou sistemas da Unifor sem levantamento, autorização e especificação próprios.
-- Fórum de discussão na proposta atual; confirmar com o professor a possibilidade de exclusão, pois consta no escopo genérico da disciplina (PQ-07).
 
 ### 6.3. Evoluções futuras — opcional
 
